@@ -106,8 +106,6 @@ begin
     Line(i * 50, -10, i * 50, 10);
     Line(-10, i * 50, 10, i * 50);
   end;
-  TextOut(40, -20, '50');
-  TextOut(-20, 40, '50');
 end;
 
 function getChordLength(i, j, q: integer): real;
@@ -170,6 +168,7 @@ var
   max_chord_length: real;
 begin
   Window.Clear;
+  coordinat_system;
   plus_minus;
   imax := 1;
   qmax := 2;
@@ -275,7 +274,7 @@ var
   str, file_name: string;
   i, t, k, l, code: integer;
 begin
-  writeln('Введите путь к файлу');
+  DrawTextCentered(-300,-300,-50,-200,'Введите путь к файлу');
   readln(file_name);
   assign(f, file_name);
   reset(f);
